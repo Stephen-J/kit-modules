@@ -1,2 +1,3 @@
-{:require-restart? true
- :actions {:assets [["assets/config.edn" ".lsp/config.edn"]]}}
+{:default
+ {:require-restart? true
+  :actions {:assets [["assets/config.edn" ".lsp/config.edn"]]}}}
