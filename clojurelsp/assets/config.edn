@@ -1,1 +1,2 @@
-{:project-specs {:classpath-cmd ["clojure" "-A:dev" "-Spath"]}}
+{:source-aliases #{:dev :test}
+ :project-specs {:classpath-cmd ["clojure" "-A:dev:test" "-Spath"]}}
