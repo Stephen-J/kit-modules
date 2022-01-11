@@ -1,2 +1,46 @@
-{:source-aliases #{:dev :test}
- :project-specs {:classpath-cmd ["clojure" "-A:dev:test" "-Spath"]}}
+
+; https://clojure-lsp.io/settings/#all-settings
+{
+ ;:source-paths #{"src" "test"} 
+ :source-aliases #{:dev}
+ :project-specs [{:project-path "deps.edn"
+                  :classpath-cmd ["clojure" "-A:dev" "-Spath"]}] 
+ ;:ignore-classpath-directories false
+ ;:lint-project-files-after-startup? true 
+ ;:notify-references-on-file-change true
+ ;:linters {:clj-kondo {:level :on
+ ;                      :report-duplicates true
+ ;                      :ns-exclude-regex ""
+ ;                      :async-custom-lint? true}}
+ ;:clean {:ns-inner-blocks-indentation :next-line
+ ;        :sort {:ns true
+ ;               :require true
+ ;               :import true
+ ;               :refer {:max-line-length 80}}}
+ ;:hover {:hide-file-location? false
+ ;        :arity-on-same-line? false
+ ;        :clojuredocs true}
+ ;:code-lens {:segregate-test-references true}
+ ;:semantic-tokens? true
+ ;:use-metadata-for-privacy? false
+ ;:auto-add-ns-to-new-files? true
+ ;:keep-parens-when-threading? false
+ ;:document-formatting? true
+ ;:document-range-formatting? true
+ ;:dependency-scheme :zip
+ ;:text-document-sync-kind :full
+ ;:cljfmt-config-path ".cljfmt.edn"
+ ;:cljfmt {}
+ ;:stubs {:generation {:namespaces #{}
+ ;                     :output-dir ".lsp/.cache/stubs"
+ ;                     :java-command "java"}
+ ;        :extra-dirs []}
+ ;:additional-snippets []
+ ;:classpath-config-paths []
+ ;:api {:exit-on-errors? true}
+ ;:show-docs-arity-on-same-line? false
+ ;:lens-segregate-test-references true
+ ;:sqlite-db-path ".lsp/sqlite.db"
+ ;:cache-path ".lsp/.cache"
+ ;:log-path "/tmp/clojure-lsp.*.out"
+ }
